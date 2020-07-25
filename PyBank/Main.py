@@ -1,9 +1,7 @@
 import os
 import csv
 
-
 csvpath = os.path.join('..', 'Resources', 'budgetdata.csv')
-
 
 #Empty List
 month = []
@@ -21,7 +19,7 @@ with open(csvpath) as csvfile:
         revenue.append(int(row[1]))
 
 
-#Monthly Change in Revenue
+    #Monthly Change in Revenue
     for i in range(len(revenue)-1):
         revenue_change.append(revenue[i+1]-revenue[i])
 
