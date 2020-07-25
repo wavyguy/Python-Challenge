@@ -1,20 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[5]:
-
-
 import os
 import csv
 
 
-# In[6]:
-
-
 csvpath = os.path.join('..', 'Resources', 'budgetdata.csv')
-
-
-# In[7]:
 
 
 #Empty List
@@ -33,15 +21,9 @@ with open(csvpath) as csvfile:
         revenue.append(int(row[1]))
 
 
-# In[8]:
-
-
 #Monthly Change in Revenue
-for i in range(len(revenue)-1):
-    revenue_change.append(revenue[i+1]-revenue[i])
-
-
-# In[9]:
+    for i in range(len(revenue)-1):
+        revenue_change.append(revenue[i+1]-revenue[i])
 
 
 #Set Minimum and Maximum Revenue Changes
@@ -49,15 +31,9 @@ max_increase_revenue = max(revenue_change)
 max_decrease_revenue = min(revenue_change)
 
 
-# In[10]:
-
-
 #Max and Min Increase Indexes
 max_increase_month = revenue_change.index(max(revenue_change)) + 1
 max_decrease_month = revenue_change.index(min(revenue_change)) + 1
-
-
-# In[20]:
 
 
 #Print Financial Analysis Statements 
