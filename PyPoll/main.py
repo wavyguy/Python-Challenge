@@ -1,21 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import os
 import csv
 from pathlib import Path
 
-
-# In[3]:
-
-
 csvpath = os.path.join("..", "Resources", "electiondata.csv" )
-
-
-# In[4]:
 
 
 #Set Variables 
@@ -24,6 +11,7 @@ khan_votes = 0
 correy_votes = 0
 li_votes = 0
 otooley_votes = 0
+
 
 #Open Data into CSV Reader and Skip First Row
 with open(csvpath) as csvfile:
@@ -44,15 +32,9 @@ with open(csvpath) as csvfile:
             otooley_votes +=1     
 
 
-# In[5]:
-
-
 #Make Dictionary Out of List
 candidates = ["Khan", "Correy", "Li", "O'Tooley"]
 votes = [khan_votes, correy_votes, li_votes, otooley_votes]
-
-
-# In[6]:
 
 
 #Use Dictionary to Zip List Together & Choose Winner 
@@ -60,17 +42,11 @@ dict_candidates_and_votes = dict(zip(candidates,votes))
 key = max(dict_candidates_and_votes, key=dict_candidates_and_votes.get)
 
 
-# In[7]:
-
-
 #Analysis
 khan_percent = ((khan_votes)/(total_votes)) *100
 correy_percent = ((correy_votes)/(total_votes)) * 100
 li_percent = ((li_votes)/(total_votes))* 100
 otooley_percent = ((otooley_votes)/(total_votes)) * 100
-
-
-# In[8]:
 
 
 #Print Summary Table
@@ -87,15 +63,11 @@ print(f"Winner: {key}")
 print(f"----------------------------")
 
 
-# In[9]:
-
-
 #Actions to Place Onto Text File
 
 output = Path("..", "PyPoll", "election_output.txt")
 
 with open(output,"w") as file:
-
 
     file.write(f"Election Results")
     file.write("\n")
@@ -118,10 +90,3 @@ with open(output,"w") as file:
     file.write(f"Winner: {key}")
     file.write("\n")
     file.write(f"----------------------------")
-
-
-# In[ ]:
-
-
-
-
