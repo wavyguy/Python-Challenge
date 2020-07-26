@@ -23,7 +23,7 @@ with open(csvpath) as csvfile:
 
     #Monthly Change in Revenue
     for i in range(len(revenue)-1):
-    revenue_change.append(revenue[i+1]-revenue[i])
+        revenue_change.append(revenue[i+1]-revenue[i])
 
 
 #Set Minimum and Maximum Revenue Changes
