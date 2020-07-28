@@ -32,12 +32,12 @@ with open(csvpath) as csvfile:
             otooley_votes +=1     
 
 
-#Make Dictionary Out of List
+#Dictionaries 
 candidates = ["Khan", "Correy", "Li", "O'Tooley"]
 votes = [khan_votes, correy_votes, li_votes, otooley_votes]
 
 
-#Use Dictionary to Zip List Together & Choose Winner 
+#Zip Dictionaries Together and Create Key to Show Winner
 dict_candidates_and_votes = dict(zip(candidates,votes))
 key = max(dict_candidates_and_votes, key=dict_candidates_and_votes.get)
 
