@@ -5,7 +5,7 @@ from pathlib import Path
 csvpath = os.path.join('..', 'Resources', 'budgetdata.csv')
 
 
-#Empty List
+#Set Variables 
 month = []
 revenue =[]
 revenue_change = []
@@ -15,7 +15,7 @@ with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
     
-   #Iterate Through Rows in File 
+   #Go Through Rows in File 
     for row in csvreader:
         month.append(row[0])
         revenue.append(int(row[1]))
