@@ -5,7 +5,7 @@ from pathlib import Path
 csvpath = os.path.join("..", "Resources", "electiondata.csv" )
 
 
-#Set Variables (Voter ID's)
+#Set Variables (Candidate's and Total)
 total_votes = 0 
 khan_votes = 0
 correy_votes = 0
@@ -18,7 +18,7 @@ with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     header = next(csvreader)
     
-    #Place Count for Voter ID's
+    #Place Count for Candidate's and Total
     for row in csvreader:
         total_votes +=1
         
