@@ -5,7 +5,7 @@ from pathlib import Path
 csvpath = os.path.join('..', 'Resources', 'budgetdata.csv')
 
 
-#Set Variables 
+#Set Outputs 
 month = []
 revenue =[]
 revenue_change = []
