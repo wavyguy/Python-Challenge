@@ -30,6 +30,12 @@ with open(csvpath) as csvfile:
             li_votes +=1
         elif row[2] == "O'Tooley":
             otooley_votes +=1     
+            
+#Analysis
+khan_percentage = ((khan_votes)/(total_votes)) *100
+correy_percentage = ((correy_votes)/(total_votes)) * 100
+li_percentage = ((li_votes)/(total_votes))* 100
+otooley_percentage = ((otooley_votes)/(total_votes)) * 100
 
 
 #Dictionaries 
@@ -41,12 +47,6 @@ votes = [khan_votes, correy_votes, li_votes, otooley_votes]
 candidates_and_votes = dict(zip(candidates,votes))
 key = max(candidates_and_votes, key=candidates_and_votes.get)
 
-
-#Analysis
-khan_percentage = ((khan_votes)/(total_votes)) *100
-correy_percentage = ((correy_votes)/(total_votes)) * 100
-li_percentage = ((li_votes)/(total_votes))* 100
-otooley_percentage = ((otooley_votes)/(total_votes)) * 100
 
 
 #Print Summary Table
