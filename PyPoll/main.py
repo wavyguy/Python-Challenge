@@ -6,11 +6,11 @@ csvpath = os.path.join("..", "Resources", "electiondata.csv" )
 
 
 #Set Variables (Candidate's and Total)
-total_votes = 0 
 khan_votes = 0
 correy_votes = 0
 li_votes = 0
 otooley_votes = 0
+total_votes = 0
 
 
 #Open Data into CSV Reader and Skip First Row
