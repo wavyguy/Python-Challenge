@@ -38,15 +38,15 @@ votes = [khan_votes, correy_votes, li_votes, otooley_votes]
 
 
 #Zip Dictionaries Together and Create Key to Show Winner
-dict_candidates_and_votes = dict(zip(candidates,votes))
-key = max(dict_candidates_and_votes, key=dict_candidates_and_votes.get)
+candidates_and_votes = dict(zip(candidates,votes))
+key = max(candidates_and_votes, key=candidates_and_votes.get)
 
 
 #Analysis
-khan_percent = ((khan_votes)/(total_votes)) *100
-correy_percent = ((correy_votes)/(total_votes)) * 100
-li_percent = ((li_votes)/(total_votes))* 100
-otooley_percent = ((otooley_votes)/(total_votes)) * 100
+khan_percentage = ((khan_votes)/(total_votes)) *100
+correy_percentage = ((correy_votes)/(total_votes)) * 100
+li_percentage = ((li_votes)/(total_votes))* 100
+otooley_percentage = ((otooley_votes)/(total_votes)) * 100
 
 
 #Print Summary Table
@@ -77,13 +77,13 @@ with open(output,"w") as file:
     file.write("\n")
     file.write(f"----------------------------")
     file.write("\n")
-    file.write(f"Khan: {khan_percent:.3f}% ({khan_votes})")
+    file.write(f"Khan: {khan_percentage:.3f}% ({khan_votes})")
     file.write("\n")
-    file.write(f"Correy: {correy_percent:.3f}% ({correy_votes})")
+    file.write(f"Correy: {correy_percentage:.3f}% ({correy_votes})")
     file.write("\n")
-    file.write(f"Li: {li_percent:.3f}% ({li_votes})")
+    file.write(f"Li: {li_percentage:.3f}% ({li_votes})")
     file.write("\n")
-    file.write(f"O'Tooley: {otooley_percent:.3f}% ({otooley_votes})")
+    file.write(f"O'Tooley: {otooley_percentage:.3f}% ({otooley_votes})")
     file.write("\n")
     file.write(f"----------------------------")
     file.write("\n")
