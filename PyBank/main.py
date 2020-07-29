@@ -36,7 +36,7 @@ max_increase_month = revenue_change.index(max(revenue_change)) + 1
 max_decrease_month = revenue_change.index(min(revenue_change)) + 1
 
 
-#Print Financial Analysis Statements 
+#Print Summary Table 
 
 print("Financial Analysis")
 print("----------------------------")
