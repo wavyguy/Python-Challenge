@@ -47,8 +47,7 @@ candidates_and_votes = dict(zip(candidates,votes))
 key = max(candidates_and_votes, key=candidates_and_votes.get)
 
 
-
-#Print Summary Table
+#Print Summary Results 
 print(f"Election Results")
 print(f"----------------------------")
 print(f"Total Votes: {total_votes}")
