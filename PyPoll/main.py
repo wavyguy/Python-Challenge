@@ -21,7 +21,6 @@ with open(csvpath) as csvfile:
     #Place Count for Candidate's and Total
     for row in csvreader:
         total_votes +=1
-        
         if row[2] == "Khan": 
             khan_votes +=1
         elif row[2] == "Correy":
