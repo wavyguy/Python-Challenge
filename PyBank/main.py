@@ -26,7 +26,7 @@ with open(csvpath) as csvfile:
         revenue_change.append(revenue[i+1]-revenue[i])
 
 
-#Set Minimum and Maximum Revenue Changes
+#Minimum and Maximum Revenue Changes
 max_increase_revenue = max(revenue_change)
 max_decrease_revenue = min(revenue_change)
 
