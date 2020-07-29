@@ -37,7 +37,7 @@ candidates = ["Khan", "Correy", "Li", "O'Tooley"]
 votes = [khan_votes, correy_votes, li_votes, otooley_votes]
 
 
-#Zip Dictionaries Together and Create Key to Show Winner
+#Zip Dictionaries Together and Create Key to Deem Winner
 candidates_and_votes = dict(zip(candidates,votes))
 key = max(candidates_and_votes, key=candidates_and_votes.get)
 
